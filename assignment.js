@@ -13,7 +13,7 @@ function feetToMile(feet) {
 
 }
 
-var resultOfMile = feetToMile(50000);
+var resultOfMile = feetToMile(6000);
 
 console.log(resultOfMile);
 
@@ -29,12 +29,13 @@ function woodCalculator(chair, table, bed) {
     var amountOfTable = table * 3;
     var amountOfBed = bed * 5;
 
-    var total = amountOfChair + amountOfTable + amountOfBed;
+    var totalWood = amountOfChair + amountOfTable + amountOfBed;
 
-    return total;
+
+    return totalWood;
 }
 
-var ResultOfWood = woodCalculator(1, 2, 5);
+var ResultOfWood = woodCalculator(2, 2, 5);
 
 console.log(ResultOfWood);
 
@@ -76,7 +77,7 @@ function brickCalculator(floor) {
 }
 
 
-var resultOfBrickCalculator = brickCalculator(12);
+var resultOfBrickCalculator = brickCalculator(21);
 
 console.log(resultOfBrickCalculator);
 
@@ -87,24 +88,33 @@ console.log(resultOfBrickCalculator);
 //tinyFriend
 function tinyFriend(name) {
 
-    var smallestname = 0;
-    var indexOfName = 0;
+    var smallest = name[0].length;
+    var smallestName = name[0];
 
     for (var i = 0; i < name.length; i++) {
 
-        var crantsmolestName = name[i].length
+        if (name[i].length <= 0 || undefined) {
 
+            console.log("Your field is empty")
 
-        if (smolestName > crantsmolestName) {
+        } else {
 
-            smolestName = crantsmolestName;
-            indexOfName = name[i];
+            if (smallest > name[i].length) {
+
+                smallest = name[i].length;
+                smallestName = name[i];
+
+            }
+
         }
 
+
+
+
     }
-    return name[indexOfName];
+    return smallestName;
 }
 
-var rasult = tinyFriend(["rasel", "ta", "fosil"]);
+var rasult = tinyFriend(["re", "t", "fosi"]);
 
 console.log(rasult);
